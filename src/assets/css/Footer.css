@@ -1,0 +1,12 @@
+.footer-full{
+    height: 15rem;
+    background-color: #343a40;
+    color: #f2f2f2;
+    font-family: 'Staatliches', cursive;
+}
+
+.footer-register{
+    background-color: black;
+    color: #f2f2f2;
+    height: 2rem;
+}

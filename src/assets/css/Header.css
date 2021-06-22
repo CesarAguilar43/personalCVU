@@ -1,0 +1,23 @@
+.banner-full{
+    width: 100%;
+    height: 25rem;
+    font-family: 'Staatliches', cursive;
+}
+
+.banner-item{
+        height: 25rem;
+        background-color: black;
+}
+
+.banner-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position:  center;
+    background-size: cover;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
