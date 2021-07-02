@@ -1,0 +1,25 @@
+.home-container{
+    font-family: 'Pompiere', cursive;
+}
+
+.home-container h1{
+    text-align: center;
+}
+
+.home-div-1{
+    margin: 20vh 0;
+}
+
+.home-container p{
+    text-align: justify;
+    font-size: xx-large;
+}
+
+.fg-home-image-1{
+    width: 350px;
+    margin: 20vh auto;
+}
+
+.fg-home-image-1 .home-image-1{
+    width: 100%;
+}
