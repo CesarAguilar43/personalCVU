@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="footer-register">
                 <Container>
                     <Row className="justify-content-md-center">
-                        <small>Todos los derechos reservados César A. Aguilar Rodríguez &#169;</small>
+                        <small>Desarrollado por César A. Aguilar Rodríguez &#169;2021 Todos los derechos reservados</small>
                     </Row>
                 </Container>
             </div>
