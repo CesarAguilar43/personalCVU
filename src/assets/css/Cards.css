@@ -1,0 +1,16 @@
+.btn-cards{
+    font-family: 'Staatliches', cursive;
+    border-color: #0078f2;
+    color: #0078f2;
+    float: right;
+}
+
+.btn-cards:hover{
+    background-color: #0078f2;
+    border-color: #0078f2;
+}
+
+.header-cards{
+    text-align: center;
+    font-size: x-large;
+}

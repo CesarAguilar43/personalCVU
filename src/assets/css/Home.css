@@ -7,7 +7,11 @@
 }
 
 .home-div-1{
-    margin: 20vh 0;
+    margin-top: 20vh;
+}
+
+.home-div-2{
+    margin-top: 5vh;
 }
 
 .home-container p{
@@ -17,9 +21,23 @@
 
 .fg-home-image-1{
     width: 350px;
-    margin: 20vh auto;
+    margin: 0 auto;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
 }
 
 .fg-home-image-1 .home-image-1{
     width: 100%;
+}
+
+.btn-home-1{
+    font-family: 'Staatliches', cursive;
+    border-color: #0078f2;
+    color: #0078f2;
+    float: right;
+}
+
+.btn-home-1:hover{
+    background-color: #0078f2;
+    border-color: #0078f2;
 }
