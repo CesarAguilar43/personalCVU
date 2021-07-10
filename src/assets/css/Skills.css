@@ -1,0 +1,24 @@
+.skills-container{
+    font-family: 'Pompiere', cursive;
+}
+
+.skills-container h1{
+    text-align: center;
+}
+
+.skills-div-1{
+    margin-top: 10vh;
+}
+
+.d-inline-block{
+    font-size: 10vh;
+    margin: 0 50px;
+}
+
+.f1{
+float: right;
+}
+
+.tags-skills{
+    position: sticky;
+}

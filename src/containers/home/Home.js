@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../../assets/css/Home.css';
 import Layout from '../../layouts/Layout';
 import { Container, Row, Col, Image, Button, OverlayTrigger, Tooltip, ProgressBar } from 'react-bootstrap';
@@ -9,6 +10,11 @@ import HoverCards from '../../components/hover-cards/Hover-Cards';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     return (
         <Layout>
             <Container className="home-container">
@@ -23,7 +29,11 @@ const Home = () => {
                                 Soy una persona con pasión por la enseñanza,
                                 empatía, con actitud positiva y ganas de aprender tecnologías
                                 nuevas.</p>
-                            <Button variant="outline-primary" className="btn-home-1" size="lg">Ver mas</Button>
+                            <Link to="/about" className="navbar-title">
+                                <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                    Ver mas
+                                </Button>
+                            </Link>
                         </div>
                     </Col>
                     <Col xs={12} lg={6}>
@@ -127,25 +137,13 @@ const Home = () => {
                     <Col xs={10} lg={10}>
                         <ProgressBar animated now={15} />
                     </Col>
-                    {/* <Col xs={12} lg={2}>
-                        <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">php</Tooltip>}>
-                            <span className="d-inline-block" style={{ fontSize: '10vh' }} >
-                                <i className="fab fa-php" />
-                            </span>
-                        </OverlayTrigger>
-                    </Col> */}
                     <Col xs={12} lg={12}>
-                        <Button variant="outline-primary" className="btn-home-1" size="lg">
-                            <Link to="/skills">Ver mas</Link>
-                        </Button>
+                        <Link to="/skills" className="navbar-title">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                Ver mas
+                            </Button>
+                        </Link>
                     </Col>
-                    {/* <Col xs={12} lg={2}>
-                        <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Css 3</Tooltip>}>
-                            <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }} >
-                                <i className="fab fa-css3-alt" />
-                            </span>
-                        </OverlayTrigger>
-                    </Col> */}
                 </Row>
                 <br />
             </Container>
