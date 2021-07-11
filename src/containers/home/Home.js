@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import '../../assets/css/Home.css';
+import '../../assets/css/Colors.css';
 import Layout from '../../layouts/Layout';
 import { Container, Row, Col, Image, Button, OverlayTrigger, Tooltip, ProgressBar } from 'react-bootstrap';
 import HomeImage from '../../assets/img/homeImage.jpeg';
@@ -8,6 +9,8 @@ import image01 from '../../assets/img/banner-pagina-inicio-chica.png';
 import image02 from '../../assets/img/theDM.png';
 import HoverCards from '../../components/hover-cards/Hover-Cards';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJava, faReact, faGit, faJs } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
 
@@ -100,7 +103,7 @@ const Home = () => {
                     <Col xs={2} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Java</Tooltip>}>
                             <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }} >
-                                <i className="fab fa-java" />
+                                <i><FontAwesomeIcon icon={faJava} className="java" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -110,7 +113,7 @@ const Home = () => {
                     <Col xs={2} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">React</Tooltip>}>
                             <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }} >
-                                <i className="fab fa-react" />
+                            <i><FontAwesomeIcon icon={faReact} className="react" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -120,7 +123,7 @@ const Home = () => {
                     <Col xs={2} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Git</Tooltip>}>
                             <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }} >
-                                <i className="fab fa-git" />
+                            <i><FontAwesomeIcon icon={faGit} className="git" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -130,7 +133,7 @@ const Home = () => {
                     <Col xs={2} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">JavaScript</Tooltip>}>
                             <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }} >
-                                <i className="fab fa-js" />
+                            <i><FontAwesomeIcon icon={faJs} className="javascript" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
