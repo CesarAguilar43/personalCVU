@@ -1,8 +1,16 @@
 import { useEffect } from 'react';
 import Layout from '../../layouts/Layout';
-import { Container, Row, Col, OverlayTrigger, Tooltip, Button} from 'react-bootstrap';
+import { Container, Row, Col, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import '../../assets/css/Skills.css';
+import '../../assets/css/Colors.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrochip, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import {
+    faJava, faAndroid, faCodepen, faCss3Alt, faHtml5,
+    faReact, faSass, faBootstrap, faNpm, faJs, faYarn, faPhp,
+    faNode, faGit, faGithub
+} from '@fortawesome/free-brands-svg-icons';
 
 const Skills = () => {
 
@@ -23,14 +31,43 @@ const Skills = () => {
                     </Col>
                 </Row>
                 <Row>
-                        <Col xs={2} lg={2}>
-                            <Link to="#p1">
-                                <Button variant="outline-primary" className="btn-home-1" size="lg">
-                                    Escritorio
-                                </Button>
-                            </Link>
-                        </Col>
+                    <Col xs={2} lg={2}>
+                        <Link to="#p1">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                Escritorio
+                            </Button>
+                        </Link>
+                    </Col>
+                    <Col xs={2} lg={2}>
+                        <Link to="#p1">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                Nivel bajo/medio
+                            </Button>
+                        </Link>
+                    </Col>
+                    <Col xs={2} lg={2}>
+                        <Link to="#p1">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                Front End
+                            </Button>
+                        </Link>
+                    </Col>
+                    <Col xs={2} lg={2}>
+                        <Link to="#p1">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                Back End
+                            </Button>
+                        </Link>
+                    </Col>
+                    <Col xs={2} lg={2}>
+                        <Link to="#p1">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                                Gestor
+                            </Button>
+                        </Link>
+                    </Col>
                 </Row>
+                <br/>
                 <Row>
                     <Col xs={12} lg={12}>
                         <label>
@@ -43,14 +80,14 @@ const Skills = () => {
                     <Col xs={2} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Java</Tooltip>}>
                             <span className="d-inline-block f1" >
-                                <i className="fab fa-java" />
+                                <i><FontAwesomeIcon icon={faJava} className="java" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Android studio</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-android" />
+                                <i><FontAwesomeIcon icon={faAndroid} className="android" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -67,14 +104,14 @@ const Skills = () => {
                     <Col xs={6} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Code</Tooltip>}>
                             <span className="d-inline-block f1">
-                                <i className="fas fa-code" />
+                                <i><FontAwesomeIcon icon={faCodepen} className="some" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={6} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Microchip</Tooltip>}>
-                            <span className="d-inline-block f2">
-                                <i className="fas fa-microchip" />
+                            <span className="d-inline-block ">
+                                <i><FontAwesomeIcon icon={faMicrochip} className="some" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -93,56 +130,56 @@ const Skills = () => {
                     <Col xs={12} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Css 3</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-css3-alt" />
+                                <i><FontAwesomeIcon icon={faCss3Alt} className="css" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Html 5</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-html5" />
+                                <i><FontAwesomeIcon icon={faHtml5} className="html" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">React</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-react" />
+                                <i><FontAwesomeIcon icon={faReact} className="react" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Sass</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-sass" />
+                                <i><FontAwesomeIcon icon={faSass} className="sass" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Bootstrap</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-bootstrap" />
+                                <i><FontAwesomeIcon icon={faBootstrap} className="bootstrap" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">npm</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-npm" />
+                                <i><FontAwesomeIcon icon={faNpm} className="npm" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">JavaScript</Tooltip>}>
                             <span className="d-inline-block f1">
-                                <i className="fab fa-js" />
+                                <i><FontAwesomeIcon icon={faJs} className="javascript" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Yarn</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-yarn" />
+                                <i><FontAwesomeIcon icon={faYarn} className="yarn" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -161,21 +198,21 @@ const Skills = () => {
                     <Col xs={12} lg={4}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">php</Tooltip>}>
                             <span className="d-inline-block f1" id="p1">
-                                <i className="fab fa-php" />
+                                <i><FontAwesomeIcon icon={faPhp} className="php" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={4}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">nodejs</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fab fa-node" />
+                                <i><FontAwesomeIcon icon={faNode} className="nodejs" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={4} className="tags-skills">
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">database</Tooltip>}>
                             <span className="d-inline-block">
-                                <i className="fas fa-database" />
+                            <i><FontAwesomeIcon icon={faDatabase} className="some" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
@@ -184,7 +221,7 @@ const Skills = () => {
                     <Col xs={12} lg={12}>
                         <label>
                             <p>
-                                Para el manejo de versiones he trabajado con un gestor de versiones como lo 
+                                Para el manejo de versiones he trabajado con un gestor de versiones como lo
                                 es Git, asi como un gestor de repositorios en la nube como lo es GitHub.
                             </p>
                         </label>
@@ -192,14 +229,14 @@ const Skills = () => {
                     <Col xs={12} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Git</Tooltip>}>
                             <span className="d-inline-block f1">
-                                <i className="fab fa-git" />
+                            <i><FontAwesomeIcon icon={faGit} className="git" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={4}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GitHub</Tooltip>}>
                             <span className="d-inline-block">
-                            <i className="fab fa-github" />
+                            <i><FontAwesomeIcon icon={faGithub} className="github" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
