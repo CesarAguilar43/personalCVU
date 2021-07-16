@@ -4,10 +4,12 @@ import About from '../containers/about/About';
 import Development from '../containers/development/Development';
 import Skills from '../containers/skills/Skills';
 import Contact from '../containers/contact/Contact';
+import Scroll from '../components/scroll/Scroll';
 
 export default function Routes() {
     return (
         <BrowserRouter>
+        <Scroll />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />

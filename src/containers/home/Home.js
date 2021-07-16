@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import '../../assets/css/Home.css';
 import '../../assets/css/Colors.css';
 import Layout from '../../layouts/Layout';
@@ -11,16 +10,13 @@ import HoverCards from '../../components/hover-cards/Hover-Cards';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJava, faReact, faGit, faJs } from '@fortawesome/free-brands-svg-icons';
+import ScrollToTop from '../../components/scroll/ScrollToTop';
 
 const Home = () => {
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, []);
-
     return (
         <Layout>
             <Container className="home-container">
+            <ScrollToTop />
                 <Row>
                     <Col xs={12} lg={6}>
                         <div className="home-div-1">

@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
+import { useRef } from 'react';
 import Layout from '../../layouts/Layout';
 import { Container, Row, Col, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import '../../assets/css/Skills.css';
 import '../../assets/css/Colors.css';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrochip, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -14,10 +13,14 @@ import {
 
 const Skills = () => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, []);
+    const gestor = useRef(null);
 
+    const goToGestor = () => {
+        window.scrollTo({
+            top: gestor.current.offsetTop,
+            behavior: "smooth"
+        })
+    };
 
     return (
         <Layout>
@@ -32,42 +35,32 @@ const Skills = () => {
                 </Row>
                 <Row>
                     <Col xs={2} lg={2}>
-                        <Link to="#p1">
                             <Button variant="outline-primary" className="btn-home-1" size="lg">
                                 Escritorio
                             </Button>
-                        </Link>
                     </Col>
                     <Col xs={2} lg={2}>
-                        <Link to="#p1">
                             <Button variant="outline-primary" className="btn-home-1" size="lg">
                                 Nivel bajo/medio
                             </Button>
-                        </Link>
                     </Col>
                     <Col xs={2} lg={2}>
-                        <Link to="#p1">
                             <Button variant="outline-primary" className="btn-home-1" size="lg">
                                 Front End
                             </Button>
-                        </Link>
                     </Col>
                     <Col xs={2} lg={2}>
-                        <Link to="#p1">
                             <Button variant="outline-primary" className="btn-home-1" size="lg">
                                 Back End
                             </Button>
-                        </Link>
                     </Col>
                     <Col xs={2} lg={2}>
-                        <Link to="#p1">
-                            <Button variant="outline-primary" className="btn-home-1" size="lg">
+                            <Button variant="outline-primary" className="btn-home-1" size="lg" onClick={goToGestor}>
                                 Gestor
                             </Button>
-                        </Link>
                     </Col>
                 </Row>
-                <br/>
+                <br />
                 <Row>
                     <Col xs={12} lg={12}>
                         <label>
@@ -212,13 +205,13 @@ const Skills = () => {
                     <Col xs={12} lg={4} className="tags-skills">
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">database</Tooltip>}>
                             <span className="d-inline-block">
-                            <i><FontAwesomeIcon icon={faDatabase} className="some" /></i>
+                                <i><FontAwesomeIcon icon={faDatabase} className="some" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12} lg={12}>
+                    <Col xs={12} lg={12} ref={gestor}>
                         <label>
                             <p>
                                 Para el manejo de versiones he trabajado con un gestor de versiones como lo
@@ -229,14 +222,14 @@ const Skills = () => {
                     <Col xs={12} lg={6}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Git</Tooltip>}>
                             <span className="d-inline-block f1">
-                            <i><FontAwesomeIcon icon={faGit} className="git" /></i>
+                                <i><FontAwesomeIcon icon={faGit} className="git" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>
                     <Col xs={12} lg={4}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GitHub</Tooltip>}>
                             <span className="d-inline-block">
-                            <i><FontAwesomeIcon icon={faGithub} className="github" /></i>
+                                <i><FontAwesomeIcon icon={faGithub} className="github" /></i>
                             </span>
                         </OverlayTrigger>
                     </Col>

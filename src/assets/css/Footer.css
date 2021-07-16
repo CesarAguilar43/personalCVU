@@ -1,12 +1,48 @@
-.footer-full{
-    height: 15rem;
+.full-footer{
     background-color: #2a2a2a;
     color: #f2f2f2;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-register{
     background-color: black;
     color: #f2f2f2;
     height: 2rem;
+}
+
+.divider{
+    border-color: #cccccc;
+}
+.lnk-footer{
+    text-decoration: none;
+    color: #ccc;
+}
+.lnk-footer:hover{
+    color: #0078f2;
+}
+
+.subtitle-footer{
+    padding-top: 0.5rem;
+    font-size: .86em;
+    color: #ccc;
+    font-weight: 700;
+    opacity: .4;
+    margin-bottom: 4px;
+}
+
+.lnks-footer{
+   list-style: none;
+   padding: 0;
+}
+
+.some{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.angle-up-footer{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.x2{
+    padding-top: 33px;
 }
