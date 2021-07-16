@@ -1,16 +1,8 @@
-import { useEffect } from 'react';
 import Layout from '../../layouts/Layout';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../../assets/css/About.css';
 
-
-
 const About = () => {
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, []);
-
     return (
         <Layout>
             <Container className="about-container">
