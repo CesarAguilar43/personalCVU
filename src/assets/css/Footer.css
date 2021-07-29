@@ -42,6 +42,7 @@
 .angle-up-footer{
     margin-top: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .x2{
     padding-top: 33px;
