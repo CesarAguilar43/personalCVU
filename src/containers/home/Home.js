@@ -10,13 +10,12 @@ import HoverCards from '../../components/hover-cards/Hover-Cards';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJava, faReact, faGit, faJs } from '@fortawesome/free-brands-svg-icons';
-import ScrollToTop from '../../components/scroll/ScrollToTop';
+//import ScrollToTop from '../../components/scroll/ScrollToTop';
 
 const Home = () => {
     return (
         <Layout>
             <Container className="home-container">
-            <ScrollToTop />
                 <Row>
                     <Col xs={12} lg={6}>
                         <div className="home-div-1">
@@ -98,7 +97,7 @@ const Home = () => {
                     </Col>
                     <Col xs={2} lg={2}>
                         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Java</Tooltip>}>
-                            <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }} >
+                            <span className="d-inline-block">
                                 <i><FontAwesomeIcon icon={faJava} className="java" /></i>
                             </span>
                         </OverlayTrigger>
