@@ -54,7 +54,7 @@ const About = () => {
                 <Row>
                     <Col xs={12} lg={12}>
                         <div className="about-div-2">
-                            <h3>Mis pasatiempos</h3>
+                            <h2>Mis pasatiempos</h2>
                             <hr />
                         </div>
                     </Col>
@@ -98,7 +98,7 @@ const About = () => {
                 <Row>
                     <Col xs={12} lg={12}>
                         <div className="about-div-3">
-                            <h3>Mis logros</h3>
+                            <h2>Mis logros</h2>
                             <hr />
                         </div>
                     </Col>
@@ -121,7 +121,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} lg={4} style={{ paddingTop: '15px' }}>
                         <span>
-                            <i><FontAwesomeIcon icon={faMedal} size="3x" /></i>
+                            <i><FontAwesomeIcon icon={faMedal} size="6x" /></i>
                         </span>
                     </Col>
                     <Col xs={12} lg={2}>
@@ -141,7 +141,7 @@ const About = () => {
                     </Col>
                     <Col xs={12} lg={4} style={{ paddingTop: '15px' }}>
                         <span>
-                            <i><FontAwesomeIcon icon={faMedal} size="3x" /></i>
+                            <i><FontAwesomeIcon icon={faMedal} size="6x" /></i>
                         </span>
                     </Col>
                 </Row>
