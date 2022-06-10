@@ -1,22 +1,16 @@
+import { Card } from 'react-bootstrap';
 import '../../assets/css/Hover-Cards.css';
 
-const Cards = (props) => {
-    const {
-        ruteImg,
-        altImg,
-        titleImg,
-        descImg
-    } = props;
-    return (
-        <div className="container-hover-img">
-            <figure>
-                <img src={ruteImg} alt={altImg} />
-                <div className="layer">
-                    <h3>{titleImg}</h3>
-                    <p>{descImg}</p>
-                </div>
-            </figure>
-        </div>);
-}
+const HoverCards = ({ ruteImg, altImg, titleImg, descImg }) => {
+  return (
+    <Card style={{ width: '18rem' }} className="container-hover-img figure">
+      <Card.Img variant="top" src={ruteImg} className="img" />
+      <Card.Body>
+        <Card.Title>{titleImg}</Card.Title>
+        <Card.Text>{descImg}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
+};
 
-export default Cards;
+export default HoverCards;
