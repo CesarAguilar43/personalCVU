@@ -1,22 +1,26 @@
 import '../../assets/css/Home.css';
 import '../../assets/css/Colors.css';
 import Layout from '../../layouts/Layout';
-import {
-  Container,
-  Row,
-  Col,
-  Image,
-  Button,
-  OverlayTrigger,
-  Tooltip,
-  ProgressBar,
-} from 'react-bootstrap';
+import { Container, Row, Col, Image, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import HomeImage from '../../assets/img/homeImage.jpeg';
 import Cards from '../../components/cards/Cards';
 import HoverCards from '../../components/hover-cards/Hover-Cards';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJava, faReact, faGit, faJs } from '@fortawesome/free-brands-svg-icons';
+import {
+  faJava,
+  faReact,
+  faGit,
+  faJs,
+  faCss3Alt,
+  faHtml5,
+  faBootstrap,
+  faNode,
+  faGoogle,
+  faGithub,
+  faNpm,
+} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faFolder, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { experienceCards, knowledgeCards } from '../../utils/InfoCards';
 
 const Home = () => {
@@ -77,15 +81,16 @@ const Home = () => {
           <Col xs={12} lg={12}>
             <h1>Mis trabajos como desarrollador ...</h1>
           </Col>
-          {experienceCards.map((card) => {
+          {experienceCards.map(({ ruteImg, alt, titleImg, descImg, style }) => {
             return (
               <>
                 <Col xs={12} lg={4}>
                   <HoverCards
-                    ruteImg={card.ruteImg}
-                    alt={card.alt}
-                    titleImg={card.titleImg}
-                    descImg={card.descImg}
+                    ruteImg={ruteImg}
+                    alt={alt}
+                    titleImg={titleImg}
+                    descImg={descImg}
+                    style={style}
                   />
                 </Col>
               </>
@@ -96,7 +101,7 @@ const Home = () => {
         <hr />
         <Row>
           <Col xs={12} lg={12}>
-            <h1>Mis habilidades ...</h1>
+            <h1>Tecnologías</h1>
           </Col>
           <Col xs={2} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Java</Tooltip>}>
@@ -107,9 +112,6 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={10} lg={10}>
-            <ProgressBar animated now={60} />
-          </Col>
           <Col xs={2} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">React</Tooltip>}>
               <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
@@ -118,9 +120,6 @@ const Home = () => {
                 </i>
               </span>
             </OverlayTrigger>
-          </Col>
-          <Col xs={10} lg={10}>
-            <ProgressBar animated now={35} />
           </Col>
           <Col xs={2} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Git</Tooltip>}>
@@ -131,9 +130,6 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={10} lg={10}>
-            <ProgressBar animated now={15} />
-          </Col>
           <Col xs={2} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">JavaScript</Tooltip>}>
               <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
@@ -143,15 +139,99 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={10} lg={10}>
-            <ProgressBar animated now={15} />
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">CSS3</Tooltip>}>
+              <span className="d-inline-block f1">
+                <i>
+                  <FontAwesomeIcon icon={faCss3Alt} className="css" />
+                </i>
+              </span>
+            </OverlayTrigger>
           </Col>
-          <Col xs={12} lg={12}>
-            <Link to="/skills" className="navbar-title">
-              <Button variant="outline-primary" className="btn-home-1" size="lg">
-                Ver mas
-              </Button>
-            </Link>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Html 5</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faHtml5} className="html" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">React-Bootstrap</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faBootstrap} className="bootstrap" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">nodejs</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faNode} className="nodejs" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Google Clod Platform</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faGoogle} className="some" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+          <Col xs={2} lg={2} className="tags-skills">
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">PostgreSQL</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faDatabase} className="some" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GitHub</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faGithub} className="github" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+          <Col xs={12} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">npm</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faNpm} className="npm" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">TypeORM</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faFolder} className="npm" />
+                </i>
+              </span>
+            </OverlayTrigger>
+          </Col>
+          <Col xs={2} lg={2}>
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GraphQL</Tooltip>}>
+              <span className="d-inline-block">
+                <i>
+                  <FontAwesomeIcon icon={faProjectDiagram} className="graphql" />
+                </i>
+              </span>
+            </OverlayTrigger>
           </Col>
         </Row>
         <br />

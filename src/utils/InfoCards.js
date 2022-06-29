@@ -7,22 +7,24 @@ export const experienceCards = [
     ruteImg: seridma,
     alt: 'Seridma',
     titleImg: 'Seridma.com.mx',
-    descImg:
-      'Se desarrollo una app con React.js del lado del cliente, con la finalidad de promocionar el servicio de fumigación',
+    descImg: 'App desarrollada con ReactJS, Css, javascript, react-bootstrap, git-github, npm',
+    style: 'img1',
   },
   {
     ruteImg: dieselMarket,
     alt: 'TheDieselMarket',
     titleImg: 'TheDieselMarket.com',
     descImg:
-      'Se desarrollo una app con React.js del lado del cliente, con la finalidad de promocionar el servicio de fumigación',
+      'App desarrollada con ReactJS, Sass, javascript, material-ui. Api desarrollada con Graphql, nodejs, JWS, Google Cloud Platform, Postgres, npm, git-github.',
+    style: 'img2',
   },
   {
     ruteImg: momentoGlobal,
     alt: 'Momento Global',
     titleImg: 'Momento Global',
     descImg:
-      'Se desarrollo una app con React.js del lado del cliente, con la finalidad de promocionar el servicio de fumigación',
+      'App desarrollada con React native, Graphql-Apollo-client. Api desarrollada con Graphql, nodejs, Typescript, Nestjs, Google Cloud Platform, npm, git-github, JWT.',
+    style: 'img3',
   },
 ];
 
