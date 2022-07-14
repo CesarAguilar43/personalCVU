@@ -9,6 +9,7 @@ export const experienceCards = [
     titleImg: 'Seridma.com.mx',
     descImg: 'App desarrollada con ReactJS, Css, javascript, react-bootstrap, git-github, npm',
     style: 'img1',
+    developId: '1',
   },
   {
     ruteImg: dieselMarket,
@@ -17,6 +18,7 @@ export const experienceCards = [
     descImg:
       'App desarrollada con ReactJS, Sass, javascript, material-ui. Api desarrollada con Graphql, nodejs, JWS, Google Cloud Platform, Postgres, npm, git-github.',
     style: 'img2',
+    developId: '2',
   },
   {
     ruteImg: momentoGlobal,
@@ -25,6 +27,7 @@ export const experienceCards = [
     descImg:
       'App desarrollada con React native, Graphql-Apollo-client. Api desarrollada con Graphql, nodejs, Typescript, Nestjs, Google Cloud Platform, npm, git-github, JWT.',
     style: 'img3',
+    developId: '3',
   },
 ];
 
