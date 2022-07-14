@@ -30,7 +30,7 @@ const Home = () => {
         <Row>
           <Col xs={12} lg={6}>
             <div className="home-div-1">
-              <h1>Este soy yo ...</h1>
+              <h1>Perfil</h1>
               <hr />
               <p>
                 Mi nombre es César Alejandro Aguilar Rodríguez. Tengo tres años en Desarrollo de
@@ -54,7 +54,7 @@ const Home = () => {
         <hr />
         <Row>
           <Col xs={12} lg={12}>
-            <h1>Mis estudios académicos ...</h1>
+            <h1>Estudios Académicos</h1>
           </Col>
           {knowledgeCards.map((card) => {
             return (
@@ -79,9 +79,9 @@ const Home = () => {
         <hr />
         <Row>
           <Col xs={12} lg={12}>
-            <h1>Mis trabajos como desarrollador ...</h1>
+            <h1>Trabajos como Desarrollador</h1>
           </Col>
-          {experienceCards.map(({ ruteImg, alt, titleImg, descImg, style }) => {
+          {experienceCards.map(({ ruteImg, alt, titleImg, descImg, style, developId }) => {
             return (
               <>
                 <Col xs={12} lg={4}>
@@ -91,6 +91,7 @@ const Home = () => {
                     titleImg={titleImg}
                     descImg={descImg}
                     style={style}
+                    developId={developId}
                   />
                 </Col>
               </>
@@ -103,7 +104,7 @@ const Home = () => {
           <Col xs={12} lg={12}>
             <h1>Tecnologías</h1>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Java</Tooltip>}>
               <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
@@ -112,7 +113,7 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">React</Tooltip>}>
               <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
@@ -121,7 +122,7 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Git</Tooltip>}>
               <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
@@ -130,7 +131,7 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">JavaScript</Tooltip>}>
               <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
@@ -139,18 +140,18 @@ const Home = () => {
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">CSS3</Tooltip>}>
-              <span className="d-inline-block f1">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faCss3Alt} className="css" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Html 5</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faHtml5} className="html" />
                 </i>
@@ -159,54 +160,54 @@ const Home = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">React-Bootstrap</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faBootstrap} className="bootstrap" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">nodejs</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faNode} className="nodejs" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Google Clod Platform</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faGoogle} className="some" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2} className="tags-skills">
+          <Col xs={12} sm={6} md={4} lg={2} className="tags-skills">
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">PostgreSQL</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faDatabase} className="some" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GitHub</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faGithub} className="github" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={12} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">npm</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faNpm} className="npm" />
                 </i>
@@ -215,18 +216,18 @@ const Home = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">TypeORM</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faFolder} className="npm" />
                 </i>
               </span>
             </OverlayTrigger>
           </Col>
-          <Col xs={2} lg={2}>
+          <Col xs={12} sm={6} md={4} lg={2}>
             <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GraphQL</Tooltip>}>
-              <span className="d-inline-block">
+              <span className="d-inline-block" style={{ fontSize: '10vh', margin: '0 50px' }}>
                 <i>
                   <FontAwesomeIcon icon={faProjectDiagram} className="graphql" />
                 </i>
