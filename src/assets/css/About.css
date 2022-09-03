@@ -1,41 +1,33 @@
-.about-container{
-    font-family: 'Pompiere', cursive;
+.about-p {
+  text-align: justify;
+  font-size: xx-large;
 }
 
-.about-container h1{
-    text-align: center;
+.about-div-1 {
+  margin-top: 10vh;
 }
 
-.about-p{
-    text-align: justify;
-    font-size:  xx-large;
+.fg-about-image-1 {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+.fg-about-image-1 .about-image-1 {
+  width: 100%;
 }
 
-.about-div-1{
-    margin-top: 10vh;
+.lnk-about {
+  padding: 0;
+  color: black;
 }
+.about-tooltip {
+  padding-left: 100px;
+  width: 350px;
+}
+#chess {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 9% 52%, 0% 0%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
-.fg-about-image-1{
-    width: 350px;
-    margin: 0 auto;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-}
-.fg-about-image-1 .about-image-1{
-    width: 100%;
-}
-
-.lnk-about{
-    padding: 0;
-    color: black;
-}
-.about-tooltip{
-    padding-left: 100px;
-    width: 350px;
-}
-#chess{
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 9% 52%, 0% 0%);
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }

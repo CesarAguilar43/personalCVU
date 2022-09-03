@@ -1,12 +1,39 @@
-.development-container {
-  font-family: 'Pompiere', cursive;
-}
-
-.development-container h1 {
-  text-align: center;
-}
-
 .development-div-1 {
-  margin-top: 20vh;
+  margin-top: 10vh;
   margin-bottom: 10vh;
+}
+
+#img-1 {
+  padding: 0;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
+#img-2 {
+  padding: 0;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
+#img-3 {
+  padding: 0;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
+.development-container p {
+  text-align: justify;
+  font-size: xx-large;
+}
+
+small {
+  font-size: large;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.primary-buttons {
+  margin-left: 3vh;
 }
