@@ -21,9 +21,9 @@ import {
   faNpm,
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFolder, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
-import { experienceCards, knowledgeCards } from '../../utils/InfoCards';
+import { experienceCards, knowledgeCards, profile } from '../../utils/InfoCards';
 
-const Home = () => {
+export function Home() {
   return (
     <Layout>
       <Container className="home-container">
@@ -32,12 +32,7 @@ const Home = () => {
             <div className="home-div-1">
               <h1>Perfil</h1>
               <hr />
-              <p>
-                Mi nombre es César Alejandro Aguilar Rodríguez. Tengo tres años en Desarrollo de
-                Software trabajando con tecnologías como NodeJS, Java y React tanto con Arquitectura
-                REST/API y Graphql. Soy una persona con pasión por la enseñanza, empatía, con
-                actitud positiva y ganas de aprender nuevas tecnologías.
-              </p>
+              <p>{profile}</p>
               <Link to="/about" className="navbar-title">
                 <Button variant="outline-primary" className="btn-home-1" size="lg">
                   Ver mas
@@ -81,7 +76,7 @@ const Home = () => {
           <Col xs={12} lg={12}>
             <h1>Trabajos como Desarrollador</h1>
           </Col>
-          {experienceCards.map(({ ruteImg, alt, titleImg, descImg, style, developId }) => {
+          {experienceCards.map(({ ruteImg, alt, company: titleImg, descImg, style, developId }) => {
             return (
               <>
                 <Col xs={12} lg={4}>
@@ -239,6 +234,4 @@ const Home = () => {
       </Container>
     </Layout>
   );
-};
-
-export default Home;
+}

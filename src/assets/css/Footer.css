@@ -1,49 +1,51 @@
-.full-footer{
-    background-color: #2a2a2a;
-    color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
+.full-footer {
+  background-color: #2a2a2a;
+  color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.footer-register{
-    background-color: black;
-    color: #f2f2f2;
-    height: 2rem;
+.footer-register {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: #f2f2f2;
+  height: 2rem;
+  font-size: xx-small;
 }
 
-.divider{
-    border-color: #cccccc;
+.divider {
+  border-color: #cccccc;
 }
-.lnk-footer{
-    text-decoration: none;
-    color: #ccc;
+.lnk-footer {
+  text-decoration: none;
+  color: #ccc;
 }
-.lnk-footer:hover{
-    color: #0078f2;
-}
-
-.subtitle-footer{
-    padding-top: 0.5rem;
-    font-size: .86em;
-    color: #ccc;
-    font-weight: 700;
-    opacity: .4;
-    margin-bottom: 4px;
+.lnk-footer:hover {
+  color: #0078f2;
 }
 
-.lnks-footer{
-   list-style: none;
-   padding: 0;
+.subtitle-footer {
+  padding-top: 0.5rem;
+  font-size: 0.86em;
+  color: #ccc;
+  font-weight: 700;
+  opacity: 0.4;
+  margin-bottom: 4px;
 }
 
-.some{
-    margin-top: 10px;
-    margin-right: 10px;
+.lnks-footer {
+  list-style: none;
+  padding: 0;
 }
-.angle-up-footer{
-    margin-top: 10px;
-    margin-right: 10px;
-    cursor: pointer;
+
+.some {
+  margin-top: 10px;
+  margin-right: 10px;
 }
-.x2{
-    padding-top: 33px;
+.angle-up-footer {
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.x2 {
+  padding-top: 33px;
 }

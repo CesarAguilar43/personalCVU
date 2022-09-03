@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../containers/home/Home';
-import About from '../containers/about/About';
-import Development from '../containers/development/Development';
+import { Home } from '../containers/home/Home';
+import { About } from '../containers/about/About';
+import { Development } from '../containers/development/Development';
 // import Skills from '../containers/skills/Skills';
 // import Contact from '../containers/contact/Contact';
 import Scroll from '../components/scroll/Scroll';

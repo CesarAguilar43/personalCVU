@@ -17,6 +17,16 @@
   cursor: pointer;
 }
 
-.img1 {
-  margin: 50px 0;
+.img1,
+.img3 {
+  margin: 0 0;
+}
+
+.img2 {
+  margin-top: 13vh;
+  margin-bottom: 13vh;
+}
+
+.title-img {
+  text-align: center;
 }

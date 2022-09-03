@@ -9,7 +9,7 @@ import '../../assets/css/About.css';
 import chess from '../../assets/img/chess.jpg';
 import { faMedal } from '@fortawesome/free-solid-svg-icons';
 
-const About = () => {
+export function About() {
   return (
     <Layout>
       <Container className="about-container">
@@ -190,6 +190,4 @@ const About = () => {
       </Container>
     </Layout>
   );
-};
-
-export default About;
+}
