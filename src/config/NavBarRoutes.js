@@ -1,4 +1,4 @@
-export const rutas = [
+export const routes = [
   {
     path: '/',
     title: 'Inicio',
@@ -10,7 +10,7 @@ export const rutas = [
     id: '2',
   },
   // {
-  //   path: '/',
+  //   path: `/development/${1}`,
   //   title: 'Desarrollo',
   //   id: '3',
   // },

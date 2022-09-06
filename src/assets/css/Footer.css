@@ -21,6 +21,7 @@
 }
 .lnk-footer:hover {
   color: #0078f2;
+  text-decoration: none;
 }
 
 .subtitle-footer {
@@ -48,4 +49,9 @@
 }
 .x2 {
   padding-top: 33px;
+}
+.justify-content-md-center {
+  text-align: center;
+  font-size: medium;
+  font-family: 'Heebo', sans-serif;
 }

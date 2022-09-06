@@ -61,12 +61,35 @@ const Footer = () => {
                   <p className="subtitle-footer">RECURSOS</p>
                   <ul className="lnks-footer">
                     <li>
-                      <Link to="#" className="lnk-footer">
+                      <a
+                        href="https://reactjs.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="lnk-footer"
+                      >
                         React
-                      </Link>
+                      </a>
                     </li>
-                    <li>FontAwesome</li>
-                    <li>flaticon</li>
+                    <li>
+                      <a
+                        href="https://fontawesome.com/docs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="lnk-footer"
+                      >
+                        FontAwesome
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.flaticon.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="lnk-footer"
+                      >
+                        flaticon
+                      </a>
+                    </li>
                   </ul>
                 </span>
               </Col>
@@ -74,9 +97,16 @@ const Footer = () => {
                 <span>
                   <p className="subtitle-footer">CONTENIDO</p>
                   <ul className="lnks-footer">
-                    <li>Inicio</li>
-                    <li>Acerca</li>
-                    <li>Desarrollo</li>
+                    <li>
+                      <Link to="/" className="lnk-footer">
+                        Inicio
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/about" className="lnk-footer">
+                        Acerca
+                      </Link>
+                    </li>
                   </ul>
                 </span>
               </Col>
@@ -94,9 +124,9 @@ const Footer = () => {
         <div className="footer-register">
           <Container>
             <Row className="justify-content-md-center">
-              <small>
+              <span>
                 Desarrollado por César A. Aguilar Rodríguez &#169;2021 Todos los derechos reservados
-              </small>
+              </span>
             </Row>
           </Container>
         </div>

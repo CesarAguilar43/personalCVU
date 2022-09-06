@@ -1,6 +1,6 @@
 import { Navbar } from 'react-bootstrap';
 import '../../assets/css/Header.css';
-import { rutas } from '../../config/NavBarRoutes';
+import { routes } from '../../config/NavBarRoutes';
 import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
             </Link>
           </Navbar.Brand>
           <Navbar.Brand className="mr-auto">
-            {rutas.map(({ path, title, id }) => {
+            {routes.map(({ path, title, id }) => {
               return (
                 <NavLink key={id} to={path} className="navlink" activeClassName="active" exact>
                   {title}
