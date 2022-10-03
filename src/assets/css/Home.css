@@ -40,3 +40,7 @@
 button .navbar-title {
   text-decoration: none;
 }
+.about-tooltip {
+  padding-left: 130px;
+  width: 350px;
+}

@@ -1,16 +1,20 @@
-.btn-cards{
-    font-family: 'Staatliches', cursive;
-    border-color: #0078f2;
-    color: #0078f2;
-    float: right;
+.btn-cards {
+  font-family: 'Staatliches', cursive;
+  border-color: #0078f2;
+  color: #0078f2;
+  float: right;
 }
 
-.btn-cards:hover{
-    background-color: #0078f2;
-    border-color: #0078f2;
+.btn-cards:hover {
+  background-color: #0078f2;
+  border-color: #0078f2;
 }
 
-.header-cards{
-    text-align: center;
-    font-size: x-large;
+.header-cards {
+  text-align: center;
+  font-size: x-large;
+}
+.text-cards {
+  text-align: justify;
+  font-size: x-large;
 }

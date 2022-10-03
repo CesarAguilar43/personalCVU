@@ -3,7 +3,6 @@ import '../../assets/css/Colors.css';
 import Layout from '../../layouts/Layout';
 import { Container, Row, Col, Image, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import HomeImage from '../../assets/img/homeImage.jpeg';
-import Cards from '../../components/cards/Cards';
 import HoverCards from '../../components/hover-cards/Hover-Cards';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,9 +18,10 @@ import {
   faGoogle,
   faGithub,
   faNpm,
+  faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFolder, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
-import { experienceCards, knowledgeCards, profile } from '../../utils/InfoCards';
+import { experienceCards, profile } from '../../utils/InfoCards';
 
 export function Home() {
   return (
@@ -43,34 +43,57 @@ export function Home() {
           <Col xs={12} lg={6}>
             <figure className="fg-home-image-1">
               <Image src={HomeImage} alt="Home image" roundedCircle className="home-image-1" />
+              <section className="about-tooltip">
+                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GitHub</Tooltip>}>
+                  <span
+                    className="d-inline-block"
+                    style={{ fontSize: '2em', padding: '0 8px', margin: '0' }}
+                  >
+                    <a
+                      className="lnk-about"
+                      href="https://github.com/CesarAguilar43"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i>
+                        <FontAwesomeIcon icon={faGithub} className="some" />
+                      </i>
+                    </a>
+                  </span>
+                </OverlayTrigger>
+                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Linkedin</Tooltip>}>
+                  <span
+                    className="d-inline-block"
+                    style={{ fontSize: '2em', padding: '0 8px', margin: '0' }}
+                  >
+                    <a
+                      className="lnk-about"
+                      href="https://linkedin.com/in/césar-a-aguilar-rodríguez-443959168"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i>
+                        <FontAwesomeIcon icon={faLinkedinIn} className="some" />
+                      </i>
+                    </a>
+                  </span>
+                </OverlayTrigger>
+                {/* <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">CV down</Tooltip>}>
+                  <span
+                    className="d-inline-block"
+                    style={{ fontSize: '2em', padding: '0 8px', margin: '0' }}
+                  >
+                    <Link className="lnk-about">
+                      <i>
+                        <FontAwesomeIcon icon={faFilePdf} className="some" />
+                      </i>
+                    </Link>
+                  </span>
+                </OverlayTrigger> */}
+              </section>
             </figure>
           </Col>
         </Row>
-        <hr />
-        <Row>
-          <Col xs={12} lg={12}>
-            <h1>Estudios Académicos</h1>
-          </Col>
-          {knowledgeCards.map((card) => {
-            return (
-              <>
-                <Col xs={12} lg={6}>
-                  <div className="home-div-2">
-                    <Cards
-                      head={card.head}
-                      title={card.title}
-                      subtitle={card.subtitle}
-                      text={card.text}
-                      age={card.age}
-                      seemore={card.seemore}
-                    />
-                  </div>
-                </Col>
-              </>
-            );
-          })}
-        </Row>
-        <br />
         <hr />
         <Row>
           <Col xs={12} lg={12}>
