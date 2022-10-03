@@ -1,13 +1,13 @@
 import Layout from '../../layouts/Layout';
-import { Container, Row, Col, Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import HomeImage from '../../assets/img/homeImage.jpeg';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilePdf, faCheckSquare } from '@fortawesome/free-regular-svg-icons';
+import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';
 import '../../assets/css/About.css';
 import chess from '../../assets/img/chess.jpg';
 import { faMedal } from '@fortawesome/free-solid-svg-icons';
+import { knowledgeCards } from '../../utils/InfoCards';
+import Cards from '../../components/cards/Cards';
 
 export function About() {
   return (
@@ -16,7 +16,7 @@ export function About() {
         <Row>
           <Col xs={12} lg={12}>
             <div className="about-div-1">
-              <h1>Acerca de mi</h1>
+              <h1>Perfil</h1>
               <hr />
             </div>
           </Col>
@@ -25,65 +25,94 @@ export function About() {
           <Col xs={12} lg={12}>
             <figure className="fg-about-image-1">
               <Image src={HomeImage} alt="Me image" roundedCircle className="about-image-1" />
-              <section className="about-tooltip">
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">GitHub</Tooltip>}>
-                  <span
-                    className="d-inline-block"
-                    style={{ fontSize: '2em', padding: '0 8px', margin: '0' }}
-                  >
-                    <a
-                      className="lnk-about"
-                      href="https://github.com/CesarAguilar43"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i>
-                        <FontAwesomeIcon icon={faGithub} className="some" />
-                      </i>
-                    </a>
-                  </span>
-                </OverlayTrigger>
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Linkedin</Tooltip>}>
-                  <span
-                    className="d-inline-block"
-                    style={{ fontSize: '2em', padding: '0 8px', margin: '0' }}
-                  >
-                    <a
-                      className="lnk-about"
-                      href="https://linkedin.com/in/césar-a-aguilar-rodríguez-443959168"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i>
-                        <FontAwesomeIcon icon={faLinkedinIn} className="some" />
-                      </i>
-                    </a>
-                  </span>
-                </OverlayTrigger>
-                <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">CV down</Tooltip>}>
-                  <span
-                    className="d-inline-block"
-                    style={{ fontSize: '2em', padding: '0 8px', margin: '0' }}
-                  >
-                    <Link className="lnk-about">
-                      <i>
-                        <FontAwesomeIcon icon={faFilePdf} className="some" />
-                      </i>
-                    </Link>
-                  </span>
-                </OverlayTrigger>
-              </section>
             </figure>
           </Col>
         </Row>
         <Row>
           <Col xs={12} lg={12}>
-            <div className="about-div-2">
-              <h2>
-                <strong>Pasatiempos</strong>
-              </h2>
-              <hr />
-            </div>
+            <h2>
+              <strong>Estudios Académicos</strong>
+            </h2>
+            <hr />
+          </Col>
+          {knowledgeCards.map((card) => {
+            return (
+              <>
+                <Col xs={12} lg={6}>
+                  <Cards
+                    head={card.head}
+                    title={card.title}
+                    subtitle={card.subtitle}
+                    text={card.text}
+                    age={card.age}
+                    seemore={card.seemore}
+                  />
+                </Col>
+              </>
+            );
+          })}
+        </Row>
+        <br />
+        <Row>
+          <Col xs={12} lg={12}>
+            <h2>
+              <strong>Diplomas</strong>
+            </h2>
+            <hr />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} lg={2}>
+            <p className="about-p">
+              <span>Abril 2019</span>
+            </p>
+          </Col>
+          <Col xs={12} lg={6}>
+            <p className="about-p">
+              <span>
+                Por haber impartido la conferencia <strong>"Aplicaciones del Lenguaje R"</strong>
+                en la 8a jornada Tecnológica de Ingeniería en Sistemas "Innovación en movimiento".
+              </span>
+            </p>
+          </Col>
+          <Col xs={12} lg={4} style={{ paddingTop: '15px' }}>
+            <span>
+              <i>
+                <FontAwesomeIcon icon={faMedal} size="3x" />
+              </i>
+            </span>
+          </Col>
+          <Col xs={12} lg={2}>
+            <p className="about-p">
+              <span>Junio 2021</span>
+            </p>
+          </Col>
+          <Col xs={12} lg={6}>
+            <p className="about-p">
+              <span>
+                <strong>
+                  Analysis and design of an agent architecture that incorporates preferences in
+                  Hardware.{' '}
+                </strong>
+                Ponencia virtual en "The international virtual workshop on business analytics Eureka
+                2021".
+              </span>
+            </p>
+          </Col>
+          <Col xs={12} lg={4} style={{ paddingTop: '15px' }}>
+            <span>
+              <i>
+                <FontAwesomeIcon icon={faMedal} size="3x" />
+              </i>
+            </span>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} lg={12}>
+            <h2>
+              <strong>Pasatiempos</strong>
+            </h2>
+            <hr />
           </Col>
         </Row>
         <Row>
@@ -127,63 +156,6 @@ export function About() {
           <Col xs={12} lg={4}>
             <span>
               <Image src={chess} width="450" id="chess" />
-            </span>
-          </Col>
-        </Row>
-        <br />
-        <Row>
-          <Col xs={12} lg={12}>
-            <div className="about-div-3">
-              <h2>
-                <strong>Diplomas</strong>
-              </h2>
-              <hr />
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} lg={2}>
-            <p className="about-p">
-              <span>Abril 2019</span>
-            </p>
-          </Col>
-          <Col xs={12} lg={6}>
-            <p className="about-p">
-              <span>
-                Por haber impartido la conferencia <strong>"Aplicaciones del Lenguaje R"</strong>
-                en la 8a jornada Tecnológica de Ingeniería en Sistemas "Innovación en movimiento".
-              </span>
-            </p>
-          </Col>
-          <Col xs={12} lg={4} style={{ paddingTop: '15px' }}>
-            <span>
-              <i>
-                <FontAwesomeIcon icon={faMedal} size="6x" />
-              </i>
-            </span>
-          </Col>
-          <Col xs={12} lg={2}>
-            <p className="about-p">
-              <span>Junio 2021</span>
-            </p>
-          </Col>
-          <Col xs={12} lg={6}>
-            <p className="about-p">
-              <span>
-                <strong>
-                  Analysis and design of an agent architecture that incorporates preferences in
-                  Hardware.{' '}
-                </strong>
-                Ponencia virtual en "The international virtual workshop on business analytics Eureka
-                2021".
-              </span>
-            </p>
-          </Col>
-          <Col xs={12} lg={4} style={{ paddingTop: '15px' }}>
-            <span>
-              <i>
-                <FontAwesomeIcon icon={faMedal} size="6x" />
-              </i>
             </span>
           </Col>
         </Row>

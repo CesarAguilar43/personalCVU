@@ -78,4 +78,4 @@ export const knowledgeCards = [
 ];
 
 export const profile =
-  ' Mi nombre es César Alejandro Aguilar Rodríguez. Tengo tres años desarrollando software trabajando con tecnologías como NodeJS, Java y React tanto con Arquitectura REST y Graphql. Soy una persona con pasión por la enseñanza, empatía, con actitud positiva y ganas de aprender nuevas tecnologías.';
+  ' Mi nombre es César Alejandro Aguilar Rodríguez. Tengo dos años desarrollando software trabajando con tecnologías como NodeJS, y React tanto con Arquitectura REST y Graphql. Soy una persona con pasión por la enseñanza, empatía, con actitud positiva y ganas de aprender nuevas tecnologías.';
