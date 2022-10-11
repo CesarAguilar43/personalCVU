@@ -3,6 +3,13 @@
   margin-bottom: 10vh;
 }
 
+.carousel-img {
+  padding: 1vh;
+  margin-bottom: 2vh;
+  display: block;
+  width: 100%;
+}
+
 #img-1 {
   padding: 0;
   margin-bottom: 2vh;
@@ -34,7 +41,12 @@ small {
 }
 
 .primary-buttons {
-  margin-left: 3vh;
-  font-size: large;
+  margin-left: 1vh;
+  margin-bottom: 1vh;
+  font-size: medium;
   font-weight: 700;
+}
+.lnk:hover {
+  color: white;
+  text-decoration: none;
 }

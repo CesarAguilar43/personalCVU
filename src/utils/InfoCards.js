@@ -1,6 +1,7 @@
 import seridma from '../assets/img/banner-pagina-inicio-chica.png';
 import dieselMarket from '../assets/img/thedm.svg';
 import momentoGlobal from '../assets/img/momentoGlobal.png';
+import { IMAGES } from '../assets/img/AppImg';
 
 export const experienceCards = [
   {
@@ -18,6 +19,17 @@ export const experienceCards = [
       moreTools: 'Git, GitHub, Hostinguer',
     },
     primaryTools: ['React', 'Nodejs', 'React-Bootstrap'],
+    developUrls: [
+      'https://reactjs.org/',
+      'https://nodejs.org/en/',
+      'https://react-bootstrap.github.io/',
+    ],
+    carouselImg: [
+      IMAGES.SeridmaHome,
+      IMAGES.SeridmaMiddle,
+      IMAGES.SeridmaFooter,
+      IMAGES.SeridmaWap,
+    ],
   },
   {
     ruteImg: dieselMarket,
@@ -35,7 +47,16 @@ export const experienceCards = [
       moreTools:
         'Git, GitHub, NodeJs, npm, yarn, Circle-ci, Google Cloud Platform, jwt, PostgreSQL',
     },
-    primaryTools: ['Graphql', 'Nodejs', 'Express', 'PostgreSQL', 'Sequelize'],
+    primaryTools: ['React', 'Graphql', 'Nodejs', 'Express', 'PostgreSQL', 'Sequelize'],
+    developUrls: [
+      'https://reactjs.org/',
+      'https://graphql.org/',
+      'https://nodejs.org/en/',
+      'https://expressjs.com/',
+      'https://www.postgresql.org/',
+      'https://sequelize.org/',
+    ],
+    carouselImg: [dieselMarket],
   },
   {
     ruteImg: momentoGlobal,
@@ -52,7 +73,16 @@ export const experienceCards = [
       backEnd: 'Express, Graphql, JavaScript, Nestjs, TypeORM, Sequelize',
       moreTools: 'Git, GitHub, NodeJs, npm, Circle-ci, Google Cloud Platform, jwt, PostgreSQL',
     },
-    primaryTools: ['Graphql', 'Nestjs', 'Nodejs', 'Express', 'PostgreSQL'],
+    primaryTools: ['Graphql', 'Nestjs', 'Nodejs', 'Express', 'PostgreSQL', 'TypeORM'],
+    developUrls: [
+      'https://graphql.org/',
+      'https://nestjs.com/',
+      'https://nodejs.org/en/',
+      'https://expressjs.com/',
+      'https://www.postgresql.org/',
+      'https://typeorm.io/',
+    ],
+    carouselImg: [IMAGES.MomentoPlayStore],
   },
 ];
 

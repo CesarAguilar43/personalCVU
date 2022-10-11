@@ -1,5 +1,5 @@
 import Layout from '../../layouts/Layout';
-import { Col, Container, Image, Row, Button } from 'react-bootstrap';
+import { Col, Container, Image, Row, Button, Carousel } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { experienceCards } from '../../utils/InfoCards';
 import '../../assets/css/Development.css';
@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow, faBuilding, faLink, faKey } from '@fortawesome/free-solid-svg-icons';
 
 export function Development() {
-  const { developId } = useParams();
+  const { developId: fetchId } = useParams();
   return (
     <Layout>
       <Container className="development-container">
@@ -15,7 +15,7 @@ export function Development() {
           <Row>
             {[
               ...experienceCards.filter(({ developId: id }) => {
-                return developId === id;
+                return fetchId === id;
               }),
             ].map(
               (
@@ -30,6 +30,8 @@ export function Development() {
                   site,
                   keyWords: { frontEnd, backEnd, moreTools },
                   primaryTools,
+                  carouselImg,
+                  developUrls,
                 },
                 index
               ) => {
@@ -37,6 +39,26 @@ export function Development() {
                   <>
                     <Col xs={12} lg={3}>
                       <Image src={ruteImg} alt={alt} className={style} id={`img-${developId}`} />
+                      <Row>
+                        {primaryTools.map((primary, index) => (
+                          <Button
+                            variant="outline-primary"
+                            size="sm"
+                            id={developId}
+                            className="primary-buttons"
+                          >
+                            <a
+                              href={developUrls[index]}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="lnk"
+                            >
+                              {primary}
+                            </a>
+                          </Button>
+                        ))}
+                      </Row>
+                      <br />
                       <hr />
                       <Row>
                         <Col xs={12} lg={2}>
@@ -96,19 +118,21 @@ export function Development() {
                       <h1>{company}</h1>
                       <hr /> <br />
                       <Row>
-                        {primaryTools.map((primary) => (
-                          <Button
-                            variant="outline-primary"
-                            size="large"
-                            id={developId}
-                            className="primary-buttons"
-                          >
-                            {primary}
-                          </Button>
-                        ))}
+                        <Col xs={12} lg={12}>
+                          <p>{descImg}</p>
+                        </Col>
+                        <Col xs={12} lg={12}>
+                          <Carousel variant="dark" fade>
+                            {carouselImg.map((img) => {
+                              return (
+                                <Carousel.Item id={developId}>
+                                  <Image src={img} id={developId} className={'carousel-img'} />
+                                </Carousel.Item>
+                              );
+                            })}
+                          </Carousel>
+                        </Col>
                       </Row>
-                      <br />
-                      <p>{descImg}</p>
                     </Col>
                   </>
                 );
