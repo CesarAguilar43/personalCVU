@@ -89,7 +89,13 @@ export function Development() {
                         <Col xs={12} lg={10}>
                           <small>
                             <div className="title">Links</div>
-                            {site}
+                            <a
+                              href={site}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {site}
+                            </a>
                           </small>
                         </Col>
                       </Row>
