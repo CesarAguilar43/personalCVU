@@ -10,7 +10,7 @@ export const experienceCards = [
     company: 'Seridma, S de RL de CV.',
     descImg: 'App desarrollada con ReactJS, Css, javascript, react-bootstrap, git-github, npm',
     city: 'Altamira, Tamaulipas.',
-    site: 'https://www.seridma.com.mx',
+    site: 'https://www.seridma.com',
     style: 'img1',
     developId: '1',
     keyWords: {
